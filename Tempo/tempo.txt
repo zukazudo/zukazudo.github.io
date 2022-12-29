@@ -1,0 +1,16 @@
+<?php 
+  $qry="SELECT description FROM teaching_experience";
+  $result= mysqli_query($conn,$qry);
+  while ($row = mysqli_fetch_array($result)){ 
+              ?>
+
+              <p><?php echo $row["description"]  ?></p><?php } ?>
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+Fatal error: Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not connect to SMTP host. Failed to connect to server in D:\XXX\htdocs\Green\forms\phpmailer\src\PHPMailer.php:2217 Stack trace: #0 D:\XXX\htdocs\Green\forms\phpmailer\src\PHPMailer.php(2003): PHPMailer\PHPMailer\PHPMailer->smtpConnect(Array) #1 D:\XXX\htdocs\Green\forms\phpmailer\src\PHPMailer.php(1662): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Fri, 18 N...', 'Message from: J...') #2 D:\XXX\htdocs\Green\forms\phpmailer\src\PHPMailer.php(1500): PHPMailer\PHPMailer\PHPMailer->postSend() #3 D:\XXX\htdocs\Green\forms\send.php(42): PHPMailer\PHPMailer\PHPMailer->send() #4 {main} thrown in D:\XXX\htdocs\Green\forms\phpmailer\src\PHPMailer.php on line 2217
