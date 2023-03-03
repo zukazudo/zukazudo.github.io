@@ -355,3 +355,13 @@
   padding-right: 2rem;
   vertical-align: middle;
 }
+/*********************************  TWO COLUMN GRID***********************************/
+
+.img-round {
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background-image: url('assets/img/chitegetse_dp.jpeg');
+  background-size: cover;
+  background-position: center;
+}
