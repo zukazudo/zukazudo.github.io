@@ -365,3 +365,14 @@
   background-size: cover;
   background-position: center;
 }
+
+
+/*********************************  LINK ***********************************/
+
+.custom-link:hover{
+  background-color: greenyellow;
+  color: black;
+}
+.custom-link:active, .custom-link:focus{
+  outline: none;
+}
