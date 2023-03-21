@@ -369,10 +369,13 @@
 
 /*********************************  LINK ***********************************/
 
-.custom-link:hover{
-  background-color: greenyellow;
-  color: black;
+.custom-link:focus, .custom-link:active, .custom-link:visited{
+  background-color: #80c792;
+  
 }
-.custom-link:active, .custom-link:focus{
-  outline: none;
+.custom-link:hover{
+  color: #428bff;
+  background-color: #80c792;
+  box-shadow: inset 200px 0 0 0 #54b3d6;;
+
 }
