@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise Message</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffccff;
+            color: #333;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .message-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .accept {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .decline {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="message-box">
+        <h2>You have a surprise message from your friend, Zuka! 🎉</h2>
+        <p>Please click "Okay" to accept.</p>
+        <button class="accept" onclick="acceptMessage()">Okay</button>
+        <button class="decline" onclick="declineMessage()">No Thanks</button>
+    </div>
+
+    <script>
+        function acceptMessage() {
+            window.location.href = "test.html";
+        }
+        function declineMessage() {
+            window.location.href = "https://youtu.be/YICDLu6voRo?si=cPOv75YtKKzXeZAh";
+        }
+    </script>
+</body>
+</html>
