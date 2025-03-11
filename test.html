@@ -75,7 +75,8 @@
                 document.getElementById('news').textContent = 'Failed to load joke';
             }
         }
-        fetchJoke();
+         fetchJoke();
+        setInterval(fetchJoke, 10000); // Refresh joke every 10 seconds
     </script>
 </body>
 </html>
