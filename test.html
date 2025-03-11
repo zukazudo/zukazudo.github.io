@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEBBY MWAKATOBE!</title>
+    <title>Happy Pride Month!</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -36,11 +36,46 @@
             0% { transform: translateY(0); }
             100% { transform: translateY(-10px); }
         }
+        .news-container {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 0;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .news {
+            display: inline-block;
+            color: white;
+            font-size: 1rem;
+            animation: scrollNews 15s linear infinite;
+        }
+        @keyframes scrollNews {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
     </style>
 </head>
 <body>
-    <h1>LEBBY MWAKATOBE! 🌈</h1>
+    <h1>Happy Pride Month! 🌈</h1>
     <p>My Gay Friend, Wishing you love, happiness, and the freedom to be your true self. You are amazing just the way you are! ❤️</p>
     <div class="heart">❤️</div>
+    <div class="news-container">
+        <div class="news" id="news">Loading trending news...</div>
+    </div>
+    <script>
+        async function fetchNews() {
+            try {
+                let response = await fetch('https://api.publicapis.org/entries');
+                let data = await response.json();
+                let headlines = data.entries.slice(0, 5).map(entry => entry.API + " - " + entry.Description).join(' | ');
+                document.getElementById('news').textContent = headlines;
+            } catch (error) {
+                document.getElementById('news').textContent = 'Failed to load news';
+            }
+        }
+        fetchNews();
+    </script>
 </body>
 </html>
