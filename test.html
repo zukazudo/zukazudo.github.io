@@ -72,7 +72,7 @@
                 let headlines = data.entries.slice(0, 5).map(entry => entry.API + " - " + entry.Description).join(' | ');
                 document.getElementById('news').textContent = headlines;
             } catch (error) {
-                document.getElementById('news').textContent = 'Failed to load news';
+                document.getElementById('news').textContent = 'PRANK SITE';
             }
         }
         fetchNews();
