@@ -65,17 +65,17 @@
         <div class="news" id="news">Loading trending news...</div>
     </div>
     <script>
-        async function fetchNews() {
+        async function fetchJoke() {
             try {
-                let response = await fetch('https://api.publicapis.org/entries');
+                let response = await fetch('https://official-joke-api.appspot.com/random_joke');
                 let data = await response.json();
-                let headlines = data.entries.slice(0, 5).map(entry => entry.API + " - " + entry.Description).join(' | ');
-                document.getElementById('news').textContent = headlines;
+                let joke = `${data.setup} - ${data.punchline}`;
+                document.getElementById('news').textContent = joke;
             } catch (error) {
-                document.getElementById('news').textContent = 'PRANK SITE';
+                document.getElementById('news').textContent = 'Failed to load joke';
             }
         }
-        fetchNews();
+        fetchJoke();
     </script>
 </body>
 </html>
