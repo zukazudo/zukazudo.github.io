@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Construction</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #121212;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            flex-direction: column;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>We Are Under Construction</h1>
+    <p>For more info, contact the developer.</p>
+    <img src="instagram.jpg" alt="Instagram QR Code">
+</body>
+</html>
+<script>
+        async function fetchJoke() {
+            try {
+                let response = await fetch('https://official-joke-api.appspot.com/random_joke');
+                let data = await response.json();
+                let joke = `${data.setup} - ${data.punchline}`;
+                document.getElementById('news').textContent = joke;
+            } catch (error) {
+                document.getElementById('news').textContent = 'Failed to load joke';
+            }
+        }
+         fetchJoke();
+        setInterval(fetchJoke, 20000); // Refresh joke every 10 seconds
+    </script>
