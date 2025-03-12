@@ -10,23 +10,35 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #121212;
+            background-color: #1e1e1e;
             color: #fff;
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             text-align: center;
             flex-direction: column;
+            padding: 20px;
         }
         h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
         }
         p {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             margin: 10px 0;
+            opacity: 0.8;
         }
         img {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             margin-top: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+        }
+        #news {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
         }
     </style>
@@ -35,9 +47,9 @@
     <h1>We Are Under Construction</h1>
     <p>For more info, contact the developer.</p>
     <img src="instagram.jpg" alt="Instagram QR Code">
-</body>
-</html>
-<script>
+    <div id="news">Loading joke...</div>
+    
+    <script>
         async function fetchJoke() {
             try {
                 let response = await fetch('https://official-joke-api.appspot.com/random_joke');
@@ -48,6 +60,8 @@
                 document.getElementById('news').textContent = 'Failed to load joke';
             }
         }
-         fetchJoke();
-        setInterval(fetchJoke, 20000); // Refresh joke every 10 seconds
+        fetchJoke();
+        setInterval(fetchJoke, 20000); // Refresh joke every 20 seconds
     </script>
+</body>
+</html>
