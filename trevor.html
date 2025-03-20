@@ -269,47 +269,48 @@ svg {
     </div>
     <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
 <script>
-  const containerEl = document.querySelector('.container');
-const checkboxEl = document.querySelector('.form-container .form-row input[type="checkbox"]');
-const nameEl = document.querySelector('.form-container .form-row input[name="name"]');
-const emailEl = document.querySelector('.form-container .form-row input[name="email"]');
-const submitBtn = document.querySelector('.form-container .form-row input[type="submit"]');
+  document.addEventListener('DOMContentLoaded', () => {
+            const containerEl = document.querySelector('.container');
+            const checkboxEl = document.querySelector('.form-container .form-row input[type="checkbox"]');
+            const nameEl = document.querySelector('.form-container .form-row input[name="name"]');
+            const emailEl = document.querySelector('.form-container .form-row input[name="email"]');
+            const submitBtn = document.querySelector('.form-container .form-row input[type="submit"]');
 
-const sprayer = document.querySelector('.sprayer');
-const sprayHandContainer = document.querySelector('.spray-hand-container');
-const sprayLines = Array.from(document.querySelectorAll('.spray-line'));
-const sprayBubbles = Array.from(document.querySelectorAll('.spray-bubble'));
+            const sprayer = document.querySelector('.sprayer');
+            const sprayHandContainer = document.querySelector('.spray-hand-container');
+            const sprayLines = Array.from(document.querySelectorAll('.spray-line'));
+            const sprayBubbles = Array.from(document.querySelectorAll('.spray-bubble'));
 
-const pushingHand = document.querySelector('.pushing-hand');
-const sprayerHead = document.querySelector('.sprayer-head');
-const gearsContainer = document.querySelector('svg .gears');
-const gearConnector = document.querySelector('.gear-connector');
+            const pushingHand = document.querySelector('.pushing-hand');
+            const sprayerHead = document.querySelector('.sprayer-head');
+            const gearsContainer = document.querySelector('svg .gears');
+            const gearConnector = document.querySelector('.gear-connector');
 
-const pullSystemContainer = document.querySelector('.pull-system');
+            const pullSystemContainer = document.querySelector('.pull-system');
 
-const checkboxPullLine = document.querySelector('.checkbox-pull-line');
-const checkboxPullCircle = document.querySelector('.checkbox-pull-circle');
-const btnPullLine = document.querySelector('.submit-btn-connector');
-const btnHandlerCircle = document.querySelector('.submit-btn-circle');
+            const checkboxPullLine = document.querySelector('.checkbox-pull-line');
+            const checkboxPullCircle = document.querySelector('.checkbox-pull-circle');
+            const btnPullLine = document.querySelector('.submit-btn-connector');
+            const btnHandlerCircle = document.querySelector('.submit-btn-circle');
 
-const spiralContainer = document.querySelector('.spiral-container');
-const weightBigContainer = document.querySelector('.weight-big-container');
+            const spiralContainer = document.querySelector('.spiral-container');
+            const weightBigContainer = document.querySelector('.weight-big-container');
 
-const scalesContainer = document.querySelector('.scales-container');
-const scalesLine = document.querySelector('.scales-moving-line');
-const weightBig = document.querySelector('.weight-big');
-const spiralPath = document.querySelector('.spiral-path');
+            const scalesContainer = document.querySelector('.scales-container');
+            const scalesLine = document.querySelector('.scales-moving-line');
+            const weightBig = document.querySelector('.weight-big');
+            const spiralPath = document.querySelector('.spiral-path');
 
-const carContainer = document.querySelector('.car-container');
-const car = document.querySelector('.car');
-const carInclineWrapper = document.querySelector('.car-container g');
-const timingChains = Array.from(document.querySelectorAll('.timing-chain'));
-const reelsConnector = document.querySelector('.reels-connector');
-const carWeightConnector = document.querySelector('.car-weight-connector');
+            const carContainer = document.querySelector('.car-container');
+            const car = document.querySelector('.car');
+            const carInclineWrapper = document.querySelector('.car-container g');
+            const timingChains = Array.from(document.querySelectorAll('.timing-chain'));
+            const reelsConnector = document.querySelector('.reels-connector');
+            const carWeightConnector = document.querySelector('.car-weight-connector');
 
-const grabbingHand = document.querySelectorAll('.grabbing-hand');
-const grabbingHandOpenFingers = Array.from(document.querySelectorAll('.grabbing-hand-finger-open'));
-const grabbingHandClosedFingers = Array.from(document.querySelectorAll('.grabbing-hand-finger-closed'));
+            const grabbingHand = document.querySelectorAll('.grabbing-hand');
+            const grabbingHandOpenFingers = Array.from(document.querySelectorAll('.grabbing-hand-finger-open'));
+            const grabbingHandClosedFingers = Array.from(document.querySelectorAll('.grabbing-hand-finger-closed'));
 
 
 layoutPreparation();
