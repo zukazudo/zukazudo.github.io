@@ -120,6 +120,27 @@
     </div>
 
     <script>
+        // Handle project toggle and navigation
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.nav a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    // For in-page anchors (not used in skills.html but included for future-proofing)
+                    if (href.startsWith('#')) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }
+                    // For external links (e.g., index.html#contact), allow default navigation
+                });
+            });
+
+            // Project toggle
+            document.querySelector('.project-toggle').addEventListener('click', toggleProjects);
+        });
+
         function toggleProjects() {
             const projectList = document.querySelector('.project-list');
             projectList.style.display = projectList.style.display === 'block' ? 'none' : 'block';
