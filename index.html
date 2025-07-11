@@ -141,24 +141,34 @@
             </div>
         </div>
     </div>
-    <script>
-    // Smooth scroll for in-page navigation, allow external links
+   <script>
+    // Smooth scroll for in-page navigation and handle incoming anchor links
     document.querySelectorAll('.nav a').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
-            // Check if the href is an in-page anchor (starts with #) or an external link
+            // For in-page anchors
             if (href.startsWith('#')) {
-                e.preventDefault(); // Prevent default for in-page anchors
+                e.preventDefault();
                 const target = document.querySelector(href);
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth' });
                 }
             }
-            // For external links (e.g., skills.html), allow normal navigation
-            // No need to preventDefault; browser will handle navigation
+            // For external links, allow default navigation
         });
+    });
+
+    // Handle incoming anchor links from other pages (e.g., skills.html)
+    window.addEventListener('load', () => {
+        const hash = window.location.hash;
+        if (hash) {
+            const target = document.querySelector(hash);
+            if (target) {
+                setTimeout(() => {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }, 100); // Small delay to ensure page load
+            }
+        }
     });
 </script>
 </body>
