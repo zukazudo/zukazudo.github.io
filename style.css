@@ -374,48 +374,4 @@ Page Styles
     font-weight: 500;
     letter-spacing: 5px;
 }
-body {
-  background: #f4f6f8;
-  color: #333;
-}
 
-.left-content {
-  background: #fefefe;
-  border-right: 1px solid #e2e8f0;
-}
-
-.main-content {
-  background: #ffffff;
-  border-left: 1px solid #e2e8f0;
-}
-
-.nav ul li a {
-  color: #64748b; /* muted blue-gray */
-}
-
-.nav ul li a:hover {
-  color: #0077cc;
-}
-
-.nav ul li a:after {
-  background: #0077cc;
-}
-
-.name,
-.role {
-  color: #1a1a1a;
-}
-
-.sm-text,
-.pg-sub-title {
-  color: #64748b;
-}
-
-.social-icons ul li a:hover,
-.social-icons-head ul li a:hover {
-  color: #0077cc;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #cbd5e1; /* soft blue-gray */
-}
